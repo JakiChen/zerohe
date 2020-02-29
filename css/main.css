@@ -1,521 +1,663 @@
 @import url("https://fonts.googleapis.com/css?family=Brawler%7CPoppins:400,500,600&display=swap&subset=latin");
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline; }
-
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900|Noto+Serif+SC:200,300,400,500,600,700,900&display=swap&subset=chinese-simplified');
+/*  font-family: 'Noto Sans SC'
+	font-family: 'Noto Serif SC',
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline; /* 使元素的基线与父元素的基线对齐 */
+}
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block; }
-
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
 body {
-  line-height: 1; }
-
+    line-height: 1;
+}
 ol, ul {
-  list-style: none; }
-
+    list-style: none;
+}
 blockquote, q {
-  quotes: none; }
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none; }
-
+    quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
 table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-
+    border-collapse: collapse;
+    border-spacing: 0;
+}
 a {
-  display: inline-block;
-  color: inherit;
-  text-decoration: none; }
-
+    display: inline-block;
+    color: inherit;
+    text-decoration: none;
+}
 input, select, button {
-  border: none;
-  -webkit-appearance: none;
-  background: none;
-  font-size: inherit;
-  font-family: inherit;
-  font-weight: inherit;
-  text-transform: inherit; }
-
+    border: none;
+    -webkit-appearance: none;
+    background: none;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    text-transform: inherit;
+}
 @keyframes reveal {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 .serif-16 {
-  font-size: 1.1111111111vw;
-  line-height: 1.667;
-  font-family: 'Brawler', serif; }
-  @media (max-width: 900px) {
-    .serif-16 {
-      font-size: 14px; } }
-  @media (min-width: 1440px) {
-    .serif-16 {
-      font-size: 16px; } }
-
-.serif-18 {
-  font-size: 1.25vw;
-  line-height: 1.667;
-  font-family: 'Brawler', serif; }
-  @media (max-width: 900px) {
-    .serif-18 {
-      font-size: 16px; } }
-  @media (min-width: 1440px) {
-    .serif-18 {
-      font-size: 18px; } }
-
-.serif-25 {
-  font-size: 1.7361111111vw;
-  line-height: 1.4;
-  font-family: 'Brawler', serif; }
-  @media (max-width: 900px) {
-    .serif-25 {
-      font-size: 20px; } }
-  @media (min-width: 1440px) {
-    .serif-25 {
-      font-size: 25px; } }
-
-.serif-40 {
-  font-size: 2.7777777778vw;
-  line-height: 1.25;
-  font-family: 'Brawler', serif; }
-  @media (max-width: 900px) {
-    .serif-40 {
-      font-size: 25px; } }
-  @media (min-width: 1440px) {
-    .serif-40 {
-      font-size: 40px; } }
-
-.serif-60 {
-  font-size: 4.1666666667vw;
-  line-height: 1.2;
-  font-family: 'Brawler', serif; }
-  @media (max-width: 900px) {
-    .serif-60 {
-      font-size: 35px; } }
-  @media (min-width: 1440px) {
-    .serif-60 {
-      font-size: 60px; } }
-
-.sans-18 {
-  font-size: 1.25vw;
-  line-height: 1.556;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 500; }
-  @media (max-width: 900px) {
-    .sans-18 {
-      font-size: 16px; } }
-  @media (min-width: 1440px) {
-    .sans-18 {
-      font-size: 18px; } }
-
-.sans-25 {
-  font-size: 1.7361111111vw;
-  line-height: 1.4;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600; }
-  @media (max-width: 900px) {
-    .sans-25 {
-      font-size: 20px; } }
-  @media (min-width: 1440px) {
-    .sans-25 {
-      font-size: 25px; } }
-
-.sans-35 {
-  font-size: 2.4305555556vw;
-  line-height: 1.286;
-  letter-spacing: -0.01em;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600; }
-  @media (max-width: 900px) {
-    .sans-35 {
-      font-size: 30px; } }
-  @media (min-width: 1440px) {
-    .sans-35 {
-      font-size: 35px; } }
-
-.sans-50 {
-  font-size: 3.4722222222vw;
-  line-height: 1.2;
-  letter-spacing: -0.01em;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600; }
-  @media (max-width: 900px) {
-    .sans-50 {
-      font-size: 35px; } }
-  @media (min-width: 1440px) {
-    .sans-50 {
-      font-size: 50px; } }
-
-.sans-80 {
-  font-size: 5.5555555556vw;
-  line-height: 1.125;
-  letter-spacing: -0.02em;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 500; }
-  @media (max-width: 900px) {
-    .sans-80 {
-      font-size: 40px; } }
-  @media (min-width: 1440px) {
-    .sans-80 {
-      font-size: 80px; } }
-
-.sans-90 {
-  font-size: 6.25vw;
-  line-height: 1.11;
-  letter-spacing: -0.02em;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 500; }
-  @media (max-width: 900px) {
-    .sans-90 {
-      font-size: 35px; } }
-  @media (min-width: 1440px) {
-    .sans-90 {
-      font-size: 90px; } }
-
-.sans-120 {
-  font-size: 7.6388888889vw;
-  line-height: 1.11;
-  letter-spacing: -0.02em;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 500; }
-  @media (max-width: 900px) {
-    .sans-120 {
-      font-size: 50px; } }
-  @media (min-width: 1440px) {
-    .sans-120 {
-      font-size: 110px; } }
-
-.sans-150 {
-  font-size: 12.22vmin;
-  line-height: 1.08;
-  letter-spacing: -0.02em;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600; }
-
-.sans-180 {
-  font-size: 12.5vw;
-  line-height: 1.08;
-  letter-spacing: -0.02em;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 500; }
-  @media (max-width: 900px) {
-    .sans-180 {
-      font-size: 90px; } }
-  @media (min-width: 1440px) {
-    .sans-180 {
-      font-size: 180px; } }
-
-* {
-  outline: none;
-  box-sizing: border-box;
-  -webkit-tap-highlight-color: transparent;
-  -webkit-touch-callout: none;
-  -webkit-user-drag: none; }
-
-html, body {
-  width: 100%;
-  scroll-behavior: smooth; }
-
-html {
-  font-size: calc(6.5px + (10 - 6.5) * ((100vw - 768px) / (1440 - 768)));
-  transition: background 500ms cubic-bezier(0.075, 0.82, 0.165, 1); }
-
-body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  touch-action: manipulation;
-  overscroll-behavior-x: none; }
-  body ::selection {
-    background: rgba(255, 219, 0, 0.99); }
-
-img, video, iframe {
-  user-select: none; }
-
-.underlined {
-  text-decoration: underline; }
-
-section:nth-child(2n + 4) {
-  background: rgba(110, 40, 10, 0.04); }
-  section:nth-child(2n + 4) cite {
-    color: #777777; }
-section .content {
-  counter-reset: section;
-  max-width: 55%;
-  padding: 5rem;
-  padding-left: 19rem; }
-  @media only screen and (max-width: 767px) {
-    section .content {
-      max-width: unset;
-      padding-left: 5rem; } }
-section h1 {
-  font-size: 3.4722222222vw;
-  line-height: 1.2;
-  letter-spacing: -0.01em;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  margin-bottom: 3.5rem;
-  margin-top: -10rem;
-  padding-top: 10rem; }
-  @media (max-width: 900px) {
-    section h1 {
-      font-size: 35px; } }
-  @media (min-width: 1440px) {
-    section h1 {
-      font-size: 50px; } }
-  @media only screen and (max-width: 767px) {
-    section h1 {
-      margin-top: -14rem;
-      padding-top: 14rem; } }
-section h2 {
-  font-size: 1.7361111111vw;
-  line-height: 1.4;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  margin: 2.5rem 0; }
-  @media (max-width: 900px) {
-    section h2 {
-      font-size: 20px; } }
-  @media (min-width: 1440px) {
-    section h2 {
-      font-size: 25px; } }
-section img, section video s {
-  width: 100%; }
-section p {
-  font-size: 1.25vw;
-  line-height: 1.667;
-  font-family: 'Brawler', serif;
-  color: #545454; }
-  @media (max-width: 900px) {
-    section p {
-      font-size: 16px; } }
-  @media (min-width: 1440px) {
-    section p {
-      font-size: 18px; } }
-  section p:not(:only-child):not(:last-child) {
-    margin-bottom: 1em; }
-  section p cite {
     font-size: 1.1111111111vw;
     line-height: 1.667;
+    font-family: 'Brawler', serif,'Noto Serif SC';
+}
+@media (max-width: 900px) {
+    .serif-16 {
+        font-size: 14px;
+    }
+}
+@media (min-width: 1440px) {
+    .serif-16 {
+        font-size: 16px;
+    }
+}
+.serif-18 {
+    font-size: 1.25vw;
+    line-height: 1.667;
+    font-family: 'Brawler', serif,'Noto Serif SC';
+}
+@media (max-width: 900px) {
+    .serif-18 {
+        font-size: 16px;
+    }
+}
+@media (min-width: 1440px) {
+    .serif-18 {
+        font-size: 18px;
+    }
+}
+.serif-25 {
+    font-size: 1.7361111111vw;
+    line-height: 1.4;
     font-family: 'Brawler', serif;
-    color: #CCCCCC; }
-    @media (max-width: 900px) {
-      section p cite {
-        font-size: 14px; } }
-    @media (min-width: 1440px) {
-      section p cite {
-        font-size: 16px; } }
-  section p.lead {
+}
+@media (max-width: 900px) {
+    .serif-25 {
+        font-size: 20px;
+    }
+}
+@media (min-width: 1440px) {
+    .serif-25 {
+        font-size: 25px;
+    }
+}
+.serif-40 {
+    font-size: 2.7777777778vw;
+    line-height: 1.25;
+    font-family: 'Brawler', serif;
+}
+@media (max-width: 900px) {
+    .serif-40 {
+        font-size: 25px;
+    }
+}
+@media (min-width: 1440px) {
+    .serif-40 {
+        font-size: 40px;
+    }
+}
+.serif-60 {
+    font-size: 4.1666666667vw;
+    line-height: 1.2;
+    font-family: 'Brawler', serif,'Noto Serif SC';
+}
+@media (max-width: 900px) {
+    .serif-60 {
+        font-size: 35px;
+    }
+}
+@media (min-width: 1440px) {
+    .serif-60 {
+        font-size: 60px;
+    }
+}
+.sans-18 {
+    font-size: 1.25vw;
+    line-height: 1.556;
+    font-family: 'Poppins', sans-serif,'Noto Sans SC';
+    font-weight: 500;
+}
+@media (max-width: 900px) {
+    .sans-18 {
+        font-size: 16px;
+    }
+}
+@media (min-width: 1440px) {
+    .sans-18 {
+        font-size: 18px;
+    }
+}
+.sans-25 {
     font-size: 1.7361111111vw;
     line-height: 1.4;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif,'Noto Sans SC';
     font-weight: 600;
-    color: #000;
-    width: 50vw; }
-    @media (max-width: 900px) {
-      section p.lead {
-        font-size: 20px; } }
-    @media (min-width: 1440px) {
-      section p.lead {
-        font-size: 25px; } }
-    @media only screen and (max-width: 767px) {
-      section p.lead {
-        width: 100%; } }
-section strong {
-  font-weight: 600; }
-section ol {
-  list-style: decimal;
-  margin: 5rem;
-  margin-right: 0;
-  width: 50vw; }
-  @media only screen and (max-width: 767px) {
-    section ol {
-      width: calc(100% - 5rem); } }
-  section ol li {
-    font-size: 1.7361111111vw;
-    line-height: 1.4;
-    font-family: 'Poppins', sans-serif;
+}
+@media (max-width: 900px) {
+    .sans-25 {
+        font-size: 20px;
+    }
+}
+@media (min-width: 1440px) {
+    .sans-25 {
+        font-size: 25px;
+    }
+}
+.sans-35 {
+    font-size: 2.4305555556vw;
+    line-height: 1.286;
+    letter-spacing: -0.01em;
+    font-family: 'Poppins', sans-serif,'Noto Sans SC';
     font-weight: 600;
-    padding-left: 1rem; }
-    @media (max-width: 900px) {
-      section ol li {
-        font-size: 20px; } }
-    @media (min-width: 1440px) {
-      section ol li {
-        font-size: 25px; } }
-    section ol li p {
-      font: unset;
-      color: unset;
-      padding-bottom: 1rem; }
-section blockquote {
-  margin: 3.5rem 0 3.5rem 0; }
-  section blockquote p {
-    font-size: 1.7361111111vw;
-    line-height: 1.4;
-    font-family: 'Poppins', sans-serif;
+}
+@media (max-width: 900px) {
+    .sans-35 {
+        font-size: 30px;
+    }
+}
+@media (min-width: 1440px) {
+    .sans-35 {
+        font-size: 35px;
+    }
+}
+.sans-50 {
+    font-size: 3.4722222222vw;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    font-family: 'Poppins', sans-serif,'Noto Sans SC';
     font-weight: 600;
-    color: #000; }
-    @media (max-width: 900px) {
-      section blockquote p {
-        font-size: 20px; } }
-    @media (min-width: 1440px) {
-      section blockquote p {
-        font-size: 25px; } }
-    section blockquote p cite {
-      font-size: 1.25vw;
-      line-height: 1.667;
-      font-family: 'Brawler', serif;
-      color: #545454;
-      display: block;
-      font-weight: 400; }
-      @media (max-width: 900px) {
-        section blockquote p cite {
-          font-size: 16px; } }
-      @media (min-width: 1440px) {
-        section blockquote p cite {
-          font-size: 18px; } }
-      section blockquote p cite:before {
-        content: "- "; }
-    section blockquote p:after {
-      content: '';
-      display: block;
-      border-bottom: 5px solid #000;
-      width: 100%;
-      margin-top: 1.5rem; }
-      @media only screen and (max-width: 767px) {
-        section blockquote p:after {
-          width: calc(100% + 5rem); } }
-section img.full-bleed {
-  width: calc(100vw + 10rem);
-  margin-top: 30px;
-  margin-bottom: 30px;
-  margin-left: -29rem;
-  left: 0;
-  margin-top: 30px;
-  margin-bottom: 30px; }
-  @media only screen and (max-width: 767px) {
-    section img.full-bleed {
-      margin-left: -5rem;
-      width: 100vw; } }
-section img.heros-logo {
-  width: 50%;
-  border-bottom: 10px solid black;
-  padding-bottom: 5rem;
-  padding-top: 5rem; }
-  @media only screen and (max-width: 767px) {
-    section img.heros-logo {
-      padding-bottom: 7rem;
-      padding-top: 7rem; } }
-
-header {
-  padding-left: 19rem;
-  background: url("../assets/images/header.svg");
-  height: 95vh;
-  background-repeat: no-repeat;
-  background-origin: content-box;
-  background-position-y: bottom;
-  background-position-x: right;
-  min-height: 800px; }
-  @media only screen and (max-width: 767px) {
-    header {
-      height: 70vh;
-      max-width: unset;
-      min-height: 550px;
-      padding-left: 5rem; } }
-  header h1 {
+}
+@media (max-width: 900px) {
+    .sans-50 {
+        font-size: 35px;
+    }
+}
+@media (min-width: 1440px) {
+    .sans-50 {
+        font-size: 50px;
+    }
+}
+.sans-80 {
+    font-size: 5.5555555556vw;
+    line-height: 1.125;
+    letter-spacing: -0.02em;
+    font-family: 'Poppins', sans-serif,'Noto Sans SC';
+    font-weight: 500;
+}
+@media (max-width: 900px) {
+    .sans-80 {
+        font-size: 40px;
+    }
+}
+@media (min-width: 1440px) {
+    .sans-80 {
+        font-size: 80px;
+    }
+}
+.sans-90 {
     font-size: 6.25vw;
     line-height: 1.11;
     letter-spacing: -0.02em;
+    font-family: 'Poppins', sans-serif,'Noto Sans SC';
+    font-weight: 500;
+}
+@media (max-width: 900px) {
+    .sans-90 {
+        font-size: 35px;
+    }
+}
+@media (min-width: 1440px) {
+    .sans-90 {
+        font-size: 90px;
+    }
+}
+.sans-120 {
+    font-size: 7.6388888889vw;
+    line-height: 1.11;
+    letter-spacing: -0.02em;
+    font-family: 'Poppins', sans-serif,'Noto Sans SC';
+    font-weight: 500;
+}
+@media (max-width: 900px) {
+    .sans-120 {
+        font-size: 50px;
+    }
+}
+@media (min-width: 1440px) {
+    .sans-120 {
+        font-size: 110px;
+    }
+}
+.sans-150 {
+    font-size: 12.22vmin;
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    font-family: 'Poppins', sans-serif,'Noto Sans SC';
+    font-weight: 600;
+}
+.sans-180 {
+    font-size: 12.5vw;
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    font-family: 'Poppins', sans-serif,'Noto Sans SC';
+    font-weight: 500;
+}
+@media (max-width: 900px) {
+    .sans-180 {
+        font-size: 90px;
+    }
+}
+@media (min-width: 1440px) {
+    .sans-180 {
+        font-size: 180px;
+    }
+}
+* {
+    outline: none;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-drag: none;
+}
+html, body {
+    width: 100%;
+    scroll-behavior: smooth; /* 抛锚点平滑移动 */
+}
+html {
+    font-size: calc(6.5px + (10 - 6.5) * ((100vw - 768px) / (1440 - 768)));
+    transition: background 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+body {
+    -webkit-font-smoothing: antialiased; /* 字体反锯齿 */
+    -moz-osx-font-smoothing: grayscale;
+    touch-action: manipulation; /* 表示浏览器只允许进行滚动和持续缩放操作，类似双击缩放这种非标准操作就不可以 */
+    overscroll-behavior-x: none;
+}
+body ::selection {
+    background: rgba(255, 219, 0, 0.99);
+}
+img, video, iframe {
+    user-select: none;
+}
+.underlined {
+    text-decoration: underline;
+}
+section:nth-child(2n + 4) {
+    background: rgba(110, 40, 10, 0.04);
+}
+section:nth-child(2n + 4) cite {
+    color: #777777;
+}
+section .content {
+    counter-reset: section;
+    max-width: 55%;
+    padding: 5rem;
+    padding-left: 19rem;
+}
+@media only screen and (max-width: 767px) {
+    section .content {
+        max-width: unset;
+        padding-left: 5rem;
+    }
+}
+section h1 {
+    font-size: 3.4722222222vw;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
     font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    margin-bottom: 3.5rem;
+    margin-top: -10rem;
+    padding-top: 10rem;
+}
+@media (max-width: 900px) {
+    section h1 {
+        font-size: 35px;
+    }
+}
+@media (min-width: 1440px) {
+    section h1 {
+        font-size: 50px;
+    }
+}
+@media only screen and (max-width: 767px) {
+    section h1 {
+        margin-top: -14rem;
+        padding-top: 14rem;
+    }
+}
+section h2 {
+    font-size: 1.7361111111vw;
+    line-height: 1.4;
+    font-family: 'Poppins', sans-serif,'Noto Sans SC';
+    font-weight: 600;
+    margin: 2.5rem 0;
+}
+@media (max-width: 900px) {
+    section h2 {
+        font-size: 20px;
+    }
+}
+@media (min-width: 1440px) {
+    section h2 {
+        font-size: 25px;
+    }
+}
+section img, section video s {
+    width: 100%;
+}
+section p {
+    font-size: 1.25vw;
+    line-height: 1.667;
+    font-family: 'Brawler', serif,'Noto Serif SC';
+    color: #545454;
+}
+@media (max-width: 900px) {
+    section p {
+        font-size: 16px;
+    }
+}
+@media (min-width: 1440px) {
+    section p {
+        font-size: 18px;
+    }
+}
+section p:not(:only-child):not(:last-child) {
+    margin-bottom: 1em;
+}
+section p cite {
+    font-size: 1.1111111111vw;
+    line-height: 1.667;
+    font-family: 'Brawler', serif,'Noto Serif SC';
+    color: #CCCCCC;
+}
+@media (max-width: 900px) {
+    section p cite {
+        font-size: 14px;
+    }
+}
+@media (min-width: 1440px) {
+    section p cite {
+        font-size: 16px;
+    }
+}
+section p.lead {
+    font-size: 1.7361111111vw;
+    line-height: 1.4;
+    font-family: 'Poppins', sans-serif,'Noto Sans SC';
+    font-weight: 600;
+    color: #000;
+    width: 50vw;
+}
+@media (max-width: 900px) {
+    section p.lead {
+        font-size: 20px;
+    }
+}
+@media (min-width: 1440px) {
+    section p.lead {
+        font-size: 25px;
+    }
+}
+@media only screen and (max-width: 767px) {
+    section p.lead {
+        width: 100%;
+    }
+}
+section strong {
+    font-weight: 600;
+}
+section ol {
+    list-style: decimal;
+    margin: 5rem;
+    margin-right: 0;
+    width: 50vw;
+}
+@media only screen and (max-width: 767px) {
+    section ol {
+        width: calc(100% - 5rem);
+    }
+}
+section ol li {
+    font-size: 1.7361111111vw;
+    line-height: 1.4;
+    font-family: 'Poppins', sans-serif,'Noto Sans SC';
+    font-weight: 600;
+    padding-left: 1rem;
+}
+@media (max-width: 900px) {
+    section ol li {
+        font-size: 20px;
+    }
+}
+@media (min-width: 1440px) {
+    section ol li {
+        font-size: 25px;
+    }
+}
+section ol li p {
+    font: unset;
+    color: unset;
+    padding-bottom: 1rem;
+}
+section blockquote {
+    margin: 3.5rem 0 3.5rem 0;
+}
+section blockquote p {
+    font-size: 1.7361111111vw;
+    line-height: 1.4;
+    font-family: 'Poppins', sans-serif,'Noto Sans SC';
+    font-weight: 600;
+    color: #000;
+}
+@media (max-width: 900px) {
+    section blockquote p {
+        font-size: 20px;
+    }
+}
+@media (min-width: 1440px) {
+    section blockquote p {
+        font-size: 25px;
+    }
+}
+section blockquote p cite {
+    font-size: 1.25vw;
+    line-height: 1.667;
+    font-family: 'Brawler', serif,'Noto Serif SC';
+    color: #545454;
+    display: block;
+    font-weight: 400;
+}
+@media (max-width: 900px) {
+    section blockquote p cite {
+        font-size: 16px;
+    }
+}
+@media (min-width: 1440px) {
+    section blockquote p cite {
+        font-size: 18px;
+    }
+}
+section blockquote p cite:before {
+    content: "- ";
+}
+section blockquote p:after {
+    content: '';
+    display: block;
+    border-bottom: 5px solid #000;
+    width: 100%;
+    margin-top: 1.5rem;
+}
+@media only screen and (max-width: 767px) {
+    section blockquote p:after {
+        width: calc(100% + 5rem);
+    }
+}
+section img.full-bleed {
+    width: calc(100vw + 10rem);
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: -29rem;
+    left: 0;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+@media only screen and (max-width: 767px) {
+    section img.full-bleed {
+        margin-left: -5rem;
+        width: 100vw;
+    }
+}
+section img.heros-logo {
+    width: 50%;
+    border-bottom: 10px solid black;
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+}
+@media only screen and (max-width: 767px) {
+    section img.heros-logo {
+        padding-bottom: 7rem;
+        padding-top: 7rem;
+    }
+}
+header {
+    padding-left: 19rem;
+    background: url("../assets/images/header.svg");
+    height: 95vh;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-position-y: bottom;
+    background-position-x: right;
+    min-height: 800px;
+}
+@media only screen and (max-width: 767px) {
+    header {
+        height: 70vh;
+        max-width: unset;
+        min-height: 550px;
+        padding-left: 5rem;
+    }
+}
+header h1 {
+    font-size: 6.25vw;
+    line-height: 1.11;
+    letter-spacing: -0.02em;
+    font-family: 'Poppins', sans-serif,'Noto Sans SC';
     font-weight: 500;
     width: 50%;
-    margin-bottom: 3rem; }
-    @media (max-width: 900px) {
-      header h1 {
-        font-size: 35px; } }
-    @media (min-width: 1440px) {
-      header h1 {
-        font-size: 90px; } }
-    @media only screen and (max-width: 767px) {
-      header h1 {
-        width: unset; } }
-  header p {
+    margin-bottom: 3rem;
+}
+@media (max-width: 900px) {
+    header h1 {
+        font-size: 35px;
+    }
+}
+@media (min-width: 1440px) {
+    header h1 {
+        font-size: 90px;
+    }
+}
+@media only screen and (max-width: 767px) {
+    header h1 {
+        width: unset;
+    }
+}
+header p {
     color: #545454;
     font-size: 1.25vw;
     line-height: 1.667;
-    font-family: 'Brawler', serif;
-    margin-bottom: 3rem; }
-    @media (max-width: 900px) {
-      header p {
-        font-size: 16px; } }
-    @media (min-width: 1440px) {
-      header p {
-        font-size: 18px; } }
-  header nav, header nav h4, header nav a {
+    font-family: 'Brawler', serif,'Noto Serif SC';
+    margin-bottom: 3rem;
+}
+@media (max-width: 900px) {
+    header p {
+        font-size: 16px;
+    }
+}
+@media (min-width: 1440px) {
+    header p {
+        font-size: 18px;
+    }
+}
+header nav, header nav h4, header nav a {
     font-size: 1.25vw;
     line-height: 1.556;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif,'Noto Sans SC';
     font-weight: 500;
-    font-weight: 600; }
-    @media (max-width: 900px) {
-      header nav, header nav h4, header nav a {
-        font-size: 16px; } }
-    @media (min-width: 1440px) {
-      header nav, header nav h4, header nav a {
-        font-size: 18px; } }
-    header nav a, header nav h4 a, header nav a a {
-      display: block;
-      text-decoration: underline; }
-  header a {
-    font-weight: 600; }
-
+    font-weight: 600;
+}
+@media (max-width: 900px) {
+    header nav, header nav h4, header nav a {
+        font-size: 16px;
+    }
+}
+@media (min-width: 1440px) {
+    header nav, header nav h4, header nav a {
+        font-size: 18px;
+    }
+}
+header nav a, header nav h4 a, header nav a a {
+    display: block;
+    text-decoration: underline;
+}
+header a {
+    font-weight: 600;
+}
 nav.top {
-  background: white;
-  display: flex;
-  justify-content: space-between;
-  height: 8rem;
-  padding-left: 5rem;
-  padding-right: 5rem;
-  padding-top: 2.5rem;
-  position: fixed;
-  width: 100%;
-  z-index: 1000; }
-  @media only screen and (max-width: 767px) {
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    height: 8rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-top: 2.5rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+@media only screen and (max-width: 767px) {
     nav.top {
-      height: 10rem; } }
-  nav.top svg.logo {
-    height: 6rem; }
-    @media only screen and (max-width: 767px) {
-      nav.top svg.logo {
-        height: 9rem; } }
-  nav.top.dark {
+        height: 10rem;
+    }
+}
+nav.top svg.logo {
+    height: 6rem;
+}
+@media only screen and (max-width: 767px) {
+    nav.top svg.logo {
+        height: 9rem;
+    }
+}
+nav.top.dark {
     background: #000;
-    z-index: unset; }
-    nav.top.dark svg.logo {
-      height: 6rem;
-      fill: #fff; }
-    nav.top.dark .nav-btn {
-      background: #fff; }
-  nav.top .nav-btn {
+    z-index: unset;
+}
+nav.top.dark svg.logo {
+    height: 6rem;
+    fill: #fff;
+}
+nav.top.dark .nav-btn {
+    background: #fff;
+}
+nav.top .nav-btn {
     right: 5rem;
     width: 5rem;
     height: 5rem;
@@ -524,150 +666,195 @@ nav.top {
     border-radius: 50%;
     transition: transform 1000ms cubic-bezier(0.075, 0.82, 0.165, 1), background 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
     -webkit-mask-image: -webkit-radial-gradient(white, black);
-    background: #000; }
-    nav.top .nav-btn:before {
-      content: '';
-      top: 50%;
-      left: 50%;
-      width: 200%;
-      height: 200%;
-      transform: translate3d(-50%, -50%, 0);
-      position: absolute;
-      display: block; }
-    nav.top .nav-btn:hover {
-      transform: scale(1.15); }
-    .mobile nav.top .nav-btn {
-      width: 10rem;
-      height: 10rem; }
+    background: #000;
+}
+nav.top .nav-btn:before {
+    content: '';
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    transform: translate3d(-50%, -50%, 0);
+    position: absolute;
+    display: block;
+}
+nav.top .nav-btn:hover {
+    transform: scale(1.15);
+}
+.mobile nav.top .nav-btn {
+    width: 10rem;
+    height: 10rem;
+}
 
+/* <显示与隐藏 弹出菜单层> */
 .modal-window {
-  position: fixed;
-  background-color: #000;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1001;
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
-  transition: all 0.3s;
-  display: flex; }
-  .modal-window:target {
+    position: fixed;
+    background-color: #000;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1001;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+    display: flex;
+}
+.modal-window:target {
     visibility: visible;
     opacity: 1;
-    pointer-events: auto; }
-  .modal-window > nav.big-links {
+    pointer-events: auto;	
+}
+/* </显示与隐藏 弹出菜单层> */
+
+.modal-window > nav.big-links {
     display: flex;
     flex-direction: column;
     margin-top: auto;
-    padding: 5rem; }
+    padding: 5rem;
+}
+.modal-window > nav.big-links a {
+    display: block;
+    transition: transform 500ms cubic-bezier(0.075, 0.82, 0.165, 1); /*菜单链接平滑移动*/
+    position: relative;
+    color: #fff;
+    margin-top: 2rem;
+    font-size: 3.4722222222vw;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    font-family: 'Poppins', sans-serif,'Noto Sans SC';
+    font-weight: 600;
+}
+@media (max-width: 900px) {
     .modal-window > nav.big-links a {
-      display: block;
-      transition: transform 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
-      position: relative;
-      color: #fff;
-      margin-top: 2rem;
-      font-size: 3.4722222222vw;
-      line-height: 1.2;
-      letter-spacing: -0.01em;
-      font-family: 'Poppins', sans-serif;
-      font-weight: 600; }
-      @media (max-width: 900px) {
-        .modal-window > nav.big-links a {
-          font-size: 35px; } }
-      @media (min-width: 1440px) {
-        .modal-window > nav.big-links a {
-          font-size: 50px; } }
-      @media only screen and (max-width: 767px) {
-        .modal-window > nav.big-links a {
-          font-size: 1.7361111111vw;
-          line-height: 1.4;
-          font-family: 'Poppins', sans-serif;
-          font-weight: 600;
-          margin-top: 3.5rem; } }
-  @media only screen and (max-width: 767px) and (max-width: 900px) {
+        font-size: 35px;
+    }
+}
+@media (min-width: 1440px) {
     .modal-window > nav.big-links a {
-      font-size: 20px; } }
-  @media only screen and (max-width: 767px) and (min-width: 1440px) {
+        font-size: 50px;
+    }
+}
+@media only screen and (max-width: 767px) {
     .modal-window > nav.big-links a {
-      font-size: 25px; } }
-
-      @media not all and (pointer: coarse) {
-        .modal-window > nav.big-links a:hover {
-          transform: translate3d(20px, 0, 0); } }
-
+        font-size: 1.7361111111vw;
+        line-height: 1.4;
+        font-family: 'Poppins', sans-serif,'Noto Sans SC';
+        font-weight: 600;
+        margin-top: 3.5rem;
+    }
+}
+@media only screen and (max-width: 767px) and (max-width: 900px) {
+    .modal-window > nav.big-links a {
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width: 767px) and (min-width: 1440px) {
+    .modal-window > nav.big-links a {
+        font-size: 25px;
+    }
+}
+@media not all and (pointer: coarse) {
+    .modal-window > nav.big-links a:hover {
+        transform: translate3d(20px, 0, 0);
+    }
+}
 .modal-close {
-  background: #fff; }
-
+    background: #fff;
+}
 footer {
-  display: flex;
-  padding: 5rem;
-  padding-left: 19rem;
-  flex-direction: column;
-  align-items: flex-start; }
-  @media only screen and (max-width: 767px) {
+    display: flex;
+    padding: 5rem;
+    padding-left: 19rem;
+    flex-direction: column;
+    align-items: flex-start;
+}
+@media only screen and (max-width: 767px) {
     footer {
-      padding-left: 5rem; } }
-  footer p {
+        padding-left: 5rem;
+    }
+}
+footer p {
     display: block;
     font-size: 1.25vw;
     line-height: 1.667;
-    font-family: 'Brawler', serif;
-    color: #545454; }
-    @media (max-width: 900px) {
-      footer p {
-        font-size: 16px; } }
-    @media (min-width: 1440px) {
-      footer p {
-        font-size: 18px; } }
-  footer img {
+    font-family: 'Brawler', serif,'Noto Serif SC';
+    color: #545454;
+}
+@media (max-width: 900px) {
+    footer p {
+        font-size: 16px;
+    }
+}
+@media (min-width: 1440px) {
+    footer p {
+        font-size: 18px;
+    }
+}
+footer img {
     height: 19rem;
     padding: 2rem;
-    padding-left: 0; }
-
+    padding-left: 0;
+}
 @media print {
-  section {
-    width: 100%; }
-
-  header {
-    padding-left: 5rem !important;
-    width: 100%; }
-
-  .content {
-    max-width: unset !important;
-    padding-left: 5rem !important; }
+    section {
+        width: 100%;
+    }
+    header {
+        padding-left: 5rem !important;
+        width: 100%;
+    }
+    .content {
+        max-width: unset !important;
+        padding-left: 5rem !important;
+    }
     .content p.lead {
-      width: 100%; }
+        width: 100%;
+    }
     .content ol {
-      width: 100%; }
-
-  img.full-bleed, img.heros-logo {
-    display: none; } }
+        width: 100%;
+    }
+    img.full-bleed, img.heros-logo {
+        display: none;
+    }
+}
 main {
-  padding-top: 11rem; }
-  @media only screen and (max-width: 767px) {
+    padding-top: 11rem;
+}
+@media only screen and (max-width: 767px) {
     main {
-      padding-top: 16rem; } }
+        padding-top: 16rem;
+    }
+}
 
+/* 实现实时滚动进度条 */
 @supports (height: 100vh) {
-  body {
-    background: linear-gradient(to right top, #000000 50%, #F2F2F2 50%);
-    background-size: calc(100%) calc(100% + 100vh);
-    background-repeat: no-repeat;
-    background-position-x: calc(15rem + 5px);
-    background-position-y: -100vh; }
+	/* 如果支 height 满足 100vh, 则下面指定的CSS会生效 */
+    body {
+        background: linear-gradient(to right top, #000000 50%, #F2F2F2 50%);
+        background-size: calc(100%) calc(100% + 100vh);
+        background-repeat: no-repeat;
+        background-position-x: calc(15rem + 5px);
+        background-position-y: -100vh;
+    }
     @media only screen and (max-width: 767px) {
-      body {
-        background-position-x: calc(20rem + 5px); } }
+        body {
+            background-position-x: calc(20rem + 5px);
+        }
+    }
     body:before {
-      content: '';
-      position: fixed;
-      top: calc(8rem + 5px);
-      bottom: 0;
-      width: 100%;
-      z-index: -1;
-      background: white; }
-      @media only screen and (max-width: 767px) {
+        content: '';
+        position: fixed;
+        top: calc(8rem + 5px);
+        bottom: 0;
+        width: 100%;
+        z-index: -1;
+        background: white;
+    }
+    @media only screen and (max-width: 767px) {
         body:before {
-          top: calc(10rem + 5px); } } }
+            top: calc(10rem + 5px);
+        }
+    }
+}
